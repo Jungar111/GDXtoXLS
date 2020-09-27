@@ -11,7 +11,7 @@ class converter:
     def convert_file(self, path):
         dataframes = gdxpds.to_dataframes(path)
         for symbol_name, df in dataframes.items():
-            print("Doing work with {}.".format(symbol_name))
+            print("Converting {}.".format(symbol_name))
             path = path.strip('.gdx') + '.xls'
             pd.DataFrame(df).to_excel(path)
 
